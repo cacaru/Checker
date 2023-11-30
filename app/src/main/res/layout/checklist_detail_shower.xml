@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80sp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:id="@+id/list_item"
+        android:background="@drawable/checklist_cell_border">
+        <TextView
+            android:id="@+id/checklist_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="날짜"
+            android:textSize="?attr/ListTextSize"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:background="@drawable/checklist_cell_border"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/checklist_cell_border"
+            >
+            <ImageView
+                android:id="@+id/checklist_day_complete_val"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:src="@drawable/checklistview_checkbox_bg"
+                android:background="@color/white"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

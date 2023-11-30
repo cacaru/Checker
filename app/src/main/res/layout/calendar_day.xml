@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/calendar_cell"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calendar_cell_inner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/calendar_cell_border"
+        android:elevation="12dp"
+        android:orientation="vertical"
+        android:padding="3dp"
+        android:weightSum="5"
+        app:layout_constraintDimensionRatio="3:5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/calendar_main_day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="?attr/calendarTextSize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/calendar_cell_cutting_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/calendar_cell_cutting_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/customBorder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.12" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/daylist_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendar_cell_cutting_line"
+            tools:listitem="@layout/calendar_has_list"
+            />
+
+        <ImageView
+            android:id="@+id/has_content_day"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/memo_icon"
+            android:background="@color/white"
+            app:layout_constraintDimensionRatio="0.8:1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <ImageView
+            android:id="@+id/bg_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/daily_check_complete"
+            android:background="#00000000"
+            app:tint="#00000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

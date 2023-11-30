@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".option_fragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <!-- header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/checklist_header_bg_gradation"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/invisible"
+            android:gravity="center"
+            android:text="@string/calender_setting"
+            android:textSize="?attr/headerTextSize"
+            android:textColor="?attr/headerTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_attribute_title_border"
+        android:elevation="2sp"
+        android:paddingStart="15sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="15sp"
+        android:paddingBottom="5sp"
+        android:text="@string/setting_theme"
+        android:textSize="?attr/categoryTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_attribute_title_border"
+        android:elevation="2sp"
+        android:paddingStart="15sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="15sp"
+        android:paddingBottom="5sp"
+        android:text="@string/setting_normal_theme"
+        android:textSize="?attr/categoryTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/checklist_attr_background_border"
+        android:orientation="vertical"
+        android:padding="10sp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline36"
+        app:layout_constraintEnd_toStartOf="@+id/guideline39"
+        app:layout_constraintStart_toStartOf="@+id/guideline37"
+        app:layout_constraintTop_toTopOf="@+id/guideline33">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/theme_0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_0"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/default_theme_background"
+                />
+            <TextView
+                android:id="@+id/theme_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_1"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/pastel_theme_background"
+                />
+            <TextView
+                android:id="@+id/theme_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_2"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/sky_theme_background"
+                />
+            <TextView
+                android:id="@+id/theme_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_3"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/green_theme_background"
+                />
+            <TextView
+                android:id="@+id/theme_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_4"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/black_theme_background"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="5"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/theme_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_5"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/redblack_theme_background"
+                />
+            <TextView
+                android:id="@+id/theme_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_6"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/greenblack_theme_background"
+                />
+            <TextView
+                android:id="@+id/theme_7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_7"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/blueblack_theme_background"
+                />
+            <TextView
+                android:id="@+id/theme_8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_8"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/purpleblack_theme_background"
+                />
+            <TextView
+                android:id="@+id/theme_9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginBottom="3sp"
+                android:text="@string/setting_normal_theme_9"
+                android:background="@drawable/setting_icon_border"
+                android:backgroundTint="@color/wood_theme_background"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <ImageView
+            android:id="@+id/setting_pre_btn"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/arrow_pre_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:tint="?attr/BtnColor" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

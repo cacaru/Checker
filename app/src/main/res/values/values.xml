@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="color" name="headerColor"/>
+    <attr format="color" name="headerTextColor"/>
+    <attr format="color" name="invisible"/>
+    <attr format="color" name="calendarMonthTextColor"/>
+    <attr format="color" name="calendarDayofWeekBackColor"/>
+    <attr format="color" name="BtnColor"/>
+    <attr format="color" name="customBorder"/>
+    <attr format="color" name="iconColor"/>
+    <attr format="color" name="attrSelectBtnColor"/>
+    <attr format="dimension" name="calendarTextSize"/>
+    <attr format="dimension" name="attrTextSize"/>
+    <attr format="dimension" name="attrIconHeight"/>
+    <attr format="dimension" name="smallIconSize"/>
+    <attr format="dimension" name="iconSize"/>
+    <attr format="dimension" name="btnIconSize"/>
+    <attr format="dimension" name="listDetailHeight"/>
+    <attr format="dimension" name="listAllHeight"/>
+    <attr format="dimension" name="listDetailAllHeight"/>
+    <attr format="dimension" name="ListTextSize"/>
+    <attr format="dimension" name="headerTextSize"/>
+    <attr format="dimension" name="dayOfWeekTextSize"/>
+    <attr format="dimension" name="btnTextSize"/>
+    <attr format="dimension" name="categoryTextSize"/>
+</resources>

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".checklist_add_fragment">
+
+    <!-- header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/checklist_header_bg_gradation"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:textColor="?attr/headerTextColor"
+            android:background="?attr/invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- body -->
+    <!-- 체크리스트 목표(이름) -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_attribute_title_border"
+        android:gravity="center"
+        android:paddingStart="15sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="15sp"
+        android:paddingBottom="5sp"
+        android:text="@string/checklist_add_txt"
+        android:textSize="?attr/categoryTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_attribute_title_border"
+        android:elevation="2sp"
+        android:paddingStart="15sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="15sp"
+        android:paddingBottom="5sp"
+        android:text="@string/checklist_attr_title"
+        android:textSize="?attr/categoryTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline14"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/checklist_add_title_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="@string/checklist_attr_add_hint"
+        android:textColorHint="@color/hint_text_color"
+        android:textSize="?attr/ListTextSize"
+        android:paddingStart="10sp"
+        android:background="@drawable/checklist_edit_name_border"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <!-- 속성 영역 -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_attribute_title_border"
+        android:elevation="2sp"
+        android:paddingStart="15sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="15sp"
+        android:paddingBottom="5sp"
+        android:text="@string/checklist_attr_attr"
+        android:textSize="?attr/categoryTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/checklist_attr_add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_btn_border"
+        android:paddingStart="20sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="20sp"
+        android:paddingBottom="5sp"
+        android:text="@string/modify_attr_text_long"
+        android:textSize="?attr/btnTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/checkList_add_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/checklist_attr_background_border"
+        tools:listitem="@layout/attribute_layout"
+        android:padding="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
+    <!-- 기간 / 반복 선택 영역 -->
+    <TextView
+        android:id="@+id/checklist_select_date_type_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_attribute_title_border"
+        android:paddingStart="15sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="15sp"
+        android:paddingBottom="5sp"
+        android:text="@string/checklist_attr_date_period"
+        android:textSize="?attr/categoryTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/checklist_type_selecter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_btn_border"
+        android:paddingStart="15sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="15sp"
+        android:paddingBottom="5sp"
+        android:text="@string/checklist_attr_date_type"
+        android:textSize="?attr/btnTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <FrameLayout
+        android:id="@+id/checklist_day_frame_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline16"
+        >
+
+        <LinearLayout
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3"
+            android:background="@drawable/checklist_attr_background_border"
+            android:padding="10sp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:id="@+id/checklist_start_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:text="2023.01.01"
+                    android:textSize="?attr/ListTextSize" />
+
+                <ImageView
+                    android:id="@+id/checklist_start_date_calendar"
+                    android:paddingStart="10sp"
+                    android:layout_width="?attr/btnIconSize"
+                    android:layout_height="?attr/btnIconSize"
+                    android:layout_marginStart="5sp"
+                    android:background="@color/white"
+                    android:src="@drawable/calendar2"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/checklist_calendar_arrow"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_weight=".8"
+                android:src="@drawable/calendar_arrow"
+                android:background="@color/white"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:id="@+id/checklist_end_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:text="2023.09.26"
+                    android:textSize="?attr/ListTextSize" />
+
+                <ImageView
+                    android:id="@+id/checklist_end_date_calendar"
+                    android:paddingStart="10sp"
+                    android:layout_width="?attr/btnIconSize"
+                    android:layout_height="?attr/btnIconSize"
+                    android:layout_marginStart="5sp"
+                    android:background="@color/white"
+                    android:src="@drawable/calendar2"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/repeat_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:background="@drawable/checklist_attr_background_border"
+            android:padding="10sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:layout_gravity="left|center"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:id="@+id/repeat_select_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_repeat_daliy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10sp"
+                        android:text="@string/checklist_date_select_daily"
+                        android:textSize="?attr/btnTextSize" />
+
+                    <RadioButton
+                        android:id="@+id/radio_repeat_weekly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10sp"
+                        android:text="@string/checklist_date_select_weekly"
+                        android:textSize="?attr/btnTextSize" />
+
+                    <RadioButton
+                        android:id="@+id/radio_repeat_regularly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checklist_date_select_regularly"
+                        android:textSize="?attr/btnTextSize" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/repeat_select_frame"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:id="@+id/repeat_daily_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="?attr/btnTextSize"
+                        android:background="@color/white"
+                        android:text="@string/checklist_date_repeat_daily_announce" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/repeat_weekly_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/repeat_sunday"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="5sp"
+                        android:gravity="center"
+                        android:text="@string/checklist_date_week_sunday"
+                        android:textSize="?attr/btnTextSize"
+                        android:textColor="@color/sunday_color"/>
+
+                    <TextView
+                        android:id="@+id/repeat_monday"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="5sp"
+                        android:gravity="center"
+                        android:text="@string/checklist_date_week_monday"
+                        android:textSize="?attr/btnTextSize" />
+
+                    <TextView
+                        android:id="@+id/repeat_tuesday"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="5sp"
+                        android:gravity="center"
+                        android:text="@string/checklist_date_week_tuesday"
+                        android:textSize="?attr/btnTextSize" />
+
+                    <TextView
+                        android:id="@+id/repeat_wednesday"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="5sp"
+                        android:gravity="center"
+                        android:text="@string/checklist_date_week_wednesday"
+                        android:textSize="?attr/btnTextSize" />
+
+                    <TextView
+                        android:id="@+id/repeat_thursday"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="5sp"
+                        android:gravity="center"
+                        android:text="@string/checklist_date_week_thursday"
+                        android:textSize="?attr/btnTextSize" />
+
+                    <TextView
+                        android:id="@+id/repeat_friday"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="5sp"
+                        android:gravity="center"
+                        android:text="@string/checklist_date_week_friday"
+                        android:textSize="?attr/btnTextSize" />
+
+                    <TextView
+                        android:id="@+id/repeat_saturday"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:layout_margin="5sp"
+                        android:gravity="center"
+                        android:text="@string/checklist_date_week_saturday"
+                        android:textSize="?attr/btnTextSize"
+                        android:textColor="@color/saturday_color"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/repeat_regular_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    >
+
+                    <Spinner
+                        android:id="@+id/repeat_regular_feature_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <EditText
+                        android:id="@+id/repeat_regular_day_val"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:textSize="?attr/btnTextSize"
+                        android:hint="숫자만"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일 마다 반복하기"
+                        android:textSize="?attr/btnTextSize"
+                        android:background="@color/white"
+                        />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+    <!-- 내용 영역 -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checklist_attribute_title_border"
+        android:elevation="2sp"
+        android:paddingStart="15sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="15sp"
+        android:paddingBottom="5sp"
+        android:text="@string/checklist_attr_content"
+        android:textSize="?attr/categoryTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/checklist_add_content_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/checklist_edit_name_border"
+        android:hint="@string/checklist_attr_content_hint"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:padding="12sp"
+        android:scrollHorizontally="false"
+        android:textColorHint="@color/hint_text_color"
+        android:textSize="?attr/ListTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <!-- footer -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <ImageView
+            android:id="@+id/checklist_addpage_pre_btn"
+            android:layout_width="?attr/btnIconSize"
+            android:layout_height="?attr/btnIconSize"
+            android:src="@drawable/arrow_pre_icon"
+            app:tint="?attr/BtnColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/checklist_add_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/checklist_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/checklist_btn_border"
+            android:paddingStart="20sp"
+            android:paddingTop="5sp"
+            android:paddingEnd="20sp"
+            android:paddingBottom="5sp"
+            android:text="@string/add_txt"
+            android:textSize="?attr/btnTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.73" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.53" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

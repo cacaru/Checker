@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calendar_main_fragment">
+    <fragment
+        android:id="@+id/calendar_main_fragment"
+        android:name="com.example.checker.calendar_main_fragment"
+        android:label="calendar_main_fragment"
+        tools:layout="@layout/calendar_main_fragment" >
+        <action
+            android:id="@+id/action_calendar_main_fragment_to_checklist_all_fragment"
+            app:destination="@id/checklist_all_fragment" />
+        <action
+            android:id="@+id/action_calendar_main_fragment_to_daylist_summary_fragment"
+            app:destination="@id/daylist_summary_fragment" />
+        <action
+            android:id="@+id/action_calendar_main_fragment_to_option_fragment"
+            app:destination="@id/option_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checklist_all_fragment"
+        android:name="com.example.checker.checklist_all_fragment"
+        android:label="checklist_all_fragment"
+        tools:layout="@layout/checklist_all_fragment" >
+        <action
+            android:id="@+id/action_checklist_all_fragment_to_checklist_add_fragment"
+            app:destination="@id/checklist_add_fragment" />
+        <action
+            android:id="@+id/action_checklist_all_fragment_to_checklist_modify_fragment"
+            app:destination="@id/checklist_modify_fragment" />
+        <action
+            android:id="@+id/action_checklist_all_fragment_to_checklist_detail_fragment"
+            app:destination="@id/checklist_detail_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checklist_add_fragment"
+        android:name="com.example.checker.checklist_add_fragment"
+        android:label="checklist_add_fragment"
+        tools:layout="@layout/checklist_add_fragment" >
+        <action
+            android:id="@+id/action_checklist_add_fragment_to_attribute_list_fragment"
+            app:destination="@id/attribute_list_fragment" />
+        <action
+            android:id="@+id/action_checklist_add_fragment_to_calendar_main_fragment2"
+            app:destination="@id/calendar_main_fragment"
+            app:popUpTo="@id/calendar_main_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/attribute_add_fragment"
+        android:name="com.example.checker.Attribute_Create_Fragment"
+        android:label="attribute_add_fragment"
+        tools:layout="@layout/attribute_add_fragment" />
+    <fragment
+        android:id="@+id/attribute_list_fragment"
+        android:name="com.example.checker.attribute_list_fragment"
+        android:label="attribute_list_fragment"
+        tools:layout="@layout/attribute_list_fragment" >
+        <action
+            android:id="@+id/action_attribute_list_fragment_to_attribute_add_fragment"
+            app:destination="@id/attribute_add_fragment" />
+        <action
+            android:id="@+id/action_attribute_list_fragment_to_attribute_modify_fragment"
+            app:destination="@id/attribute_modify_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attribute_modify_fragment"
+        android:name="com.example.checker.attribute_modify_fragment"
+        android:label="attribute_modify_fragment"
+        tools:layout="@layout/attribute_modify_fragment" />
+    <fragment
+        android:id="@+id/checklist_modify_fragment"
+        android:name="com.example.checker.checklist_modify_fragment"
+        android:label="checklist_modify_fragment"
+        tools:layout="@layout/checklist_modify_fragment" >
+        <action
+            android:id="@+id/action_checklist_modify_fragment_to_attribute_list_fragment"
+            app:destination="@id/attribute_list_fragment" />
+        <action
+            android:id="@+id/action_checklist_modify_fragment_to_checklist_all_fragment"
+            app:destination="@id/checklist_all_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/daylist_summary_fragment"
+        android:name="com.example.checker.daylist_summary_fragment"
+        android:label="daylist_summary_fragment"
+        tools:layout="@layout/daylist_summary_fragment" >
+        <action
+            android:id="@+id/action_daylist_summary_fragment_to_daylist_details_fragment"
+            app:destination="@id/daylist_details_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/daylist_details_fragment"
+        android:name="com.example.checker.daylist_details_fragment"
+        android:label="daylist_details_fragment"
+        tools:layout="@layout/daylist_details_fragment" >
+        <action
+            android:id="@+id/action_daylist_details_fragment_to_checklist_add_fragment"
+            app:destination="@id/checklist_add_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checklist_detail_fragment"
+        android:name="com.example.checker.checklist_detail_fragment"
+        android:label="checklist_detail_fragment"
+        tools:layout="@layout/checklist_detail_fragment" />
+    <fragment
+        android:id="@+id/option_fragment"
+        android:name="com.example.checker.option_fragment"
+        android:label="option_fragment"
+        tools:layout="@layout/option_fragment" />
+</navigation>

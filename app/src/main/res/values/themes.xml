@@ -1,0 +1,152 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Checker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="invisible">#00000000</item>
+        <item name="headerTextSize">22sp</item>
+        <item name="dayOfWeekTextSize">12sp</item>
+        <item name="btnTextSize">17sp</item>
+        <item name="categoryTextSize">22sp</item>
+        <item name="calendarTextSize">10sp</item>
+        <item name="attrTextSize">13sp</item>
+        <item name="attrIconHeight">20sp</item>
+        <item name="smallIconSize">15sp</item>
+        <item name="iconSize">20sp</item>
+        <item name="btnIconSize">40sp</item>
+        <item name="ListTextSize">15sp</item>
+        <item name="listDetailHeight">25sp</item>
+        <item name="listDetailAllHeight">80sp</item>
+        <item name="listAllHeight">60sp</item>
+        <item name="calendarMonthTextColor">@color/black</item>
+        <item name="headerTextColor">@color/black</item>
+        <item name="android:datePickerDialogTheme">@style/DialogDatePicker.Theme</item>
+    </style>
+
+    <style name="Base.Theme.Checker.Default" parent="Base.Theme.Checker">
+        <item name="colorPrimary">@color/default_theme_background</item>
+        <item name="colorAccent">@color/default_theme_background</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="headerColor">@color/default_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/default_theme_background</item>
+        <item name="BtnColor">@color/default_btn_color</item>
+        <item name="customBorder">@color/default_border</item>
+        <item name="iconColor">@color/white</item>
+        <item name="attrSelectBtnColor">@color/default_attr_select_color</item>
+    </style>
+
+    <style name="Base.Theme.Checker.Pastel" parent="Base.Theme.Checker">
+        <item name="colorPrimary">@color/pastel_theme_background</item>
+        <item name="android:background">@color/pastel_background</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="headerColor">@color/pastel_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/pastel_theme_background</item>
+        <item name="BtnColor">@color/pastel_btn</item>
+        <item name="customBorder">@color/pastel_border</item>
+        <item name="iconColor">@color/white</item>
+        <item name="attrSelectBtnColor">@color/pastel_attr_select_color</item>
+    </style>
+
+    <style name="Base.Theme.Checker.Sky" parent="Base.Theme.Checker">
+        <item name="colorPrimary">@color/sky_theme_background</item>
+        <item name="android:background">@color/sky_background</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="headerColor">@color/sky_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/sky_theme_background</item>
+        <item name="BtnColor">@color/sky_btn</item>
+        <item name="customBorder">@color/sky_border</item>
+        <item name="iconColor">@color/white</item>
+        <item name="attrSelectBtnColor">@color/sky_attr_select_color</item>
+    </style>
+
+    <style name="Base.Theme.Checker.Green" parent="Base.Theme.Checker">
+        <item name="colorPrimary">@color/green_theme_background</item>
+        <item name="android:background">@color/green_background</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="headerColor">@color/green_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/green_theme_background</item>
+        <item name="BtnColor">@color/green_btn</item>
+        <item name="customBorder">@color/green_border</item>
+        <item name="iconColor">@color/white</item>
+        <item name="attrSelectBtnColor">@color/green_attr_select_color</item>
+    </style>
+
+    <style name="Base.Theme.Checker.Wood" parent="Base.Theme.Checker">
+        <item name="colorPrimary">@color/wood_theme_background</item>
+        <item name="android:background">@drawable/wood_background_texture</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="headerColor">@color/wood_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/wood_theme_background</item>
+        <item name="BtnColor">@color/wood_btn</item>
+        <item name="customBorder">@color/wood_border</item>
+        <item name="iconColor">@color/white</item>
+        <item name="attrSelectBtnColor">@color/wood_attr_select_color</item>
+    </style>
+
+    <style name="Base.Theme.Checker.Black" parent="Base.Theme.Checker">
+        <item name="colorPrimary">@color/black_theme_background</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/default_icon_color</item>
+        <item name="headerTextColor">@color/white</item>
+        <item name="headerColor">@color/white</item>
+        <item name="calendarDayofWeekBackColor">@color/black_theme_background</item>
+        <item name="BtnColor">@color/white</item>
+        <item name="customBorder">@color/black_border</item>
+        <item name="iconColor">@color/default_icon_color</item>
+        <item name="attrSelectBtnColor">@color/black_attr_select_color</item>
+        <item name="android:datePickerDialogTheme">@style/DialogDatePicker.BlackTheme</item>
+    </style>
+
+    <style name="Base.Theme.Checker.RedBlack" parent="Base.Theme.Checker.Black">
+        <item name="android:background">@color/redblack_background</item>
+        <!--item name="headerColor">@color/redblack_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/redblack_theme_background</item-->
+        <item name="attrSelectBtnColor">@color/redblack_attr_select_color</item>
+    </style>
+
+    <style name="Base.Theme.Checker.GreenBlack" parent="Base.Theme.Checker.Black">
+        <item name="android:background">@color/greenblack_background</item>
+        <!--item name="headerColor">@color/greenblack_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/greenblack_theme_background</item-->
+        <item name="attrSelectBtnColor">@color/greenblack_attr_select_color</item>
+    </style>
+
+    <style name="Base.Theme.Checker.BlueBlack" parent="Base.Theme.Checker.Black">
+        <item name="android:background">@color/blueblack_background</item>
+        <!--item name="headerColor">@color/blueblack_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/black_theme_background</item-->
+        <item name="attrSelectBtnColor">@color/blueblack_attr_select_color</item>
+    </style>
+
+    <style name="Base.Theme.Checker.PurpleBlack" parent="Base.Theme.Checker.Black">
+        <item name="android:background">@color/purpleblack_background</item>
+        <!--item name="headerColor">@color/purpleblack_theme_background</item>
+        <item name="calendarDayofWeekBackColor">@color/purpleblack_theme_background</item-->
+        <item name="attrSelectBtnColor">@color/purpleblack_attr_select_color</item>
+    </style>
+
+    <style name="DialogDatePicker.Theme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/black</item>
+        <item name="colorAccent">@color/purpleblack_attr_select_color</item>
+        <!-- day color -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!-- weekday color -->
+        <item name="android:textColorSecondary">@color/black</item>
+        <!-- 월 일 확대부분 -->
+        <item name="android:textColorPrimaryInverse">@color/black</item>
+        <!-- 년 선택 부분 -->
+        <item name="android:textColorSecondaryInverse">@color/black</item>
+        <item name="android:colorMultiSelectHighlight">@color/black</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="DialogDatePicker.BlackTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/black</item>
+        <item name="colorAccent">@color/hint_text_color</item>
+        <item name="backgroundColor">@color/primary</item>
+        <!-- day color -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- weekday color -->
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+</resources>

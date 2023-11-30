@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/attr_layout"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/attr_name"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/attrIconHeight"
+        android:text="일일"
+        android:textSize="?attr/attrTextSize"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_margin="10sp"
+        android:paddingStart="15sp"
+        android:paddingEnd="15sp"
+        android:background="@drawable/checklist_attr_border"
+        />
+
+</LinearLayout>

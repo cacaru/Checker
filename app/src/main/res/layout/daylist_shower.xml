@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/listDetailAllHeight"
+    android:padding="4sp"
+    android:background="@drawable/checklist_attr_background_border"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/daylist_checklist_name"
+        android:layout_width="0dp"
+        android:layout_height="?attr/listDetailHeight"
+        android:layout_weight="2"
+        android:background="@drawable/checklist_attr_border"
+        android:gravity="center"
+        android:text="할일 목록 이름"
+        android:textSize="?attr/ListTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline29"
+        app:layout_constraintEnd_toStartOf="@+id/guideline27"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/daylist_checklist_attr_name"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/listDetailHeight"
+        android:layout_margin="10sp"
+        android:background="@drawable/checklist_attr_background_border"
+        android:gravity="center"
+        android:paddingStart="10sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="10sp"
+        android:paddingBottom="5sp"
+        android:text="속성"
+        android:textSize="?attr/attrTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline29"
+        app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".5" />
+
+
+    <TextView
+        android:id="@+id/daylist_checklist_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/listDetailHeight"
+        android:layout_margin="10sp"
+        android:background="@drawable/checklist_attr_background_border"
+        android:gravity="center"
+        android:paddingStart="10sp"
+        android:paddingTop="5sp"
+        android:paddingEnd="10sp"
+        android:paddingBottom="5sp"
+        android:text="유형"
+        android:textSize="?attr/attrTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline29"
+        app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/daylist_checklist_attr_name"
+        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/daylist_complete_checkbox"
+        android:layout_width="?attr/btnIconSize"
+        android:layout_height="?attr/btnIconSize"
+        android:layout_gravity="center"
+        android:src="@drawable/checklistview_checkbox_bg"
+        android:button="@null"
+        android:buttonTint="?attr/customBorder"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline28"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/daylist_checklist_content"
+        android:layout_width="0dp"
+        android:layout_height="?attr/listDetailHeight"
+        android:layout_weight="2"
+        android:gravity="left|center"
+        android:paddingStart="20sp"
+        android:text="세부 내용"
+        android:textSize="?attr/ListTextSize"
+        android:background="@drawable/checklist_attr_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline29" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

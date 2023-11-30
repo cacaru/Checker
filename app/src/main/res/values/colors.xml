@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#FF0000FF</color>
+
+    <color name="primary">#EFF9FF</color>  <!-- 초기 상단 배경색 -->
+    <color name="primary2">#DCE1E8</color> <!-- 파스텔 상단 기본색 -->
+    <color name="calendar_day_background">#eaeae9</color> <!-- 어두운 상단, 요일 배경색 -->
+
+    <!-- checklist area -->
+    <color name="checklist_btn">#C3C9FA</color>     <!-- 파스텔 체크리스트 하단 버튼색-->
+    <color name="checklist_attr_btn">#ACE5EC</color> <!-- 파스텔 체크리스트 상단 버튼색 -->
+    <color name="checklist_attr_btn2">#c9c9c6</color> <!-- 어두운 체크리스트 상단 버튼색 -->
+
+    <color name="checklist_attr_shower">#64C8FD</color> <!-- 파스텔 항목 표기 -->
+    <color name="checklist_attr_shower2">#F6F1DD</color><!-- 어두운 항목 표기 -->
+
+    <!-- calendar cell color setting -->
+    <color name="calendar_border_line">#B8C2FD</color>  <!-- 파스텔 날짜 테두리 색 후보 1 -->
+    <color name="calendar_border_line2">#C7CFDB</color> <!-- 파스텔 날짜 테두리 색 후보 2 -->
+    <color name="background_primary">#F5FFFF</color>    <!-- 어두운 달력 날짜 테두리 색 -->
+
+    <color name="saturday_color">#0070C0</color>
+    <color name="sunday_color">#FF0000</color>
+    <color name="hint_text_color">#ADADAD</color>
+
+    <!-- 기본 세팅 -->
+    <color name="default_theme_background">#EAEAD2</color>      <!-- 기본 테마 배경 -->
+    <color name="default_border">#C5C5C5</color>     <!-- 기본 테두리 -->
+    <color name="default_btn_color">#C8C686</color>  <!-- 기본 버튼 색 -->
+    <color name="default_icon_color">#444444</color> <!-- 기본 아이콘 색 -->
+    <color name="default_attr_select_color">#E7F1DD</color>
+
+    <!-- 블랙 -->
+    <color name="black_theme_background">#808080</color>
+    <color name="black_border">#E7E6E6</color>
+    <color name="black_attr_select_color">#B4B4B4</color>
+
+    <!-- 블랙 + 레드 -->
+    <color name="redblack_theme_background">#544546</color>
+    <color name="redblack_background">#0A0000</color>
+    <color name="redblack_attr_select_color">#AA97A0</color>
+
+    <!-- 블랙 + 그린 -->
+    <color name="greenblack_theme_background">#454E48</color>
+    <color name="greenblack_background">#000A00</color>
+    <color name="greenblack_attr_select_color">#788C82</color>
+
+    <!-- 블랙 + 블루 -->
+    <color name="blueblack_theme_background">#444E56</color>
+    <color name="blueblack_background">#00000A</color>
+    <color name="blueblack_attr_select_color">#96A0AA</color>
+
+    <!-- 블랙 + 퍼플 -->
+    <color name="purpleblack_theme_background">#4C4751</color>
+    <color name="purpleblack_background">#0A0014</color>
+    <color name="purpleblack_attr_select_color">#8C8296</color>
+    <color name="purpleblack_header_background_top">#372D40</color>
+    <color name="purpleblack_header_background_bottom">#5F5569</color>
+
+    <!-- 파스텔 -->
+    <color name="pastel_theme_background">#EFF9FF</color>
+    <color name="pastel_border">#B8C2FD</color>
+    <color name="pastel_btn">#E8ECFE</color>
+    <color name="pastel_background">#FFFBFE</color>
+    <color name="pastel_attr_select_color">#EEE7FF</color>
+
+    <!-- 스카이 -->
+    <color name="sky_theme_background">#D9F5FF</color>
+    <color name="sky_border">#00B0F0</color>
+    <color name="sky_btn">#57D3FF</color>
+    <color name="sky_background">#EFFBFF</color>
+    <color name="sky_attr_select_color">#B3EFFF</color>
+
+    <!-- 그린 -->
+    <color name="green_theme_background">#CCE9AD</color>
+    <color name="green_border">#92D050</color>
+    <color name="green_btn">#00cc5c</color>
+    <color name="green_background">#F2FAEA</color>
+    <color name="green_attr_select_color">#7DDF9E</color>
+
+    <!-- 우드 -->
+    <color name="wood_theme_background">#F2CD88</color>
+    <color name="wood_border">#A68053</color>
+    <color name="wood_btn">#A68053</color>
+    <color name="wood_attr_select_color">#C8AA64</color>
+
+</resources>

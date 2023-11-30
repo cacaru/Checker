@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Checker</string>
+    <string name="calendar_title">월간 체크</string>
+    <string name="checklist_title">리스트</string>
+
+    <string name="setting_theme">테마 설정</string>
+    <string name="setting_normal_theme">기본 테마</string>
+    <string name="setting_normal_theme_0">기본</string>
+    <string name="setting_normal_theme_1">파스텔</string>
+    <string name="setting_normal_theme_2">하늘</string>
+    <string name="setting_normal_theme_3">초록</string>
+    <string name="setting_normal_theme_4">까망</string>
+    <string name="setting_normal_theme_5">흑적</string>
+    <string name="setting_normal_theme_6">흑녹</string>
+    <string name="setting_normal_theme_7">흑청</string>
+    <string name="setting_normal_theme_8">흑자</string>
+    <string name="setting_normal_theme_9">나무</string>
+
+
+
+    <string name="checklist_add_txt">항목 추가하기</string>
+    <string name="checklist_modify_txt">항목 수정하기</string>
+    <string name="checklist_detail_txt">항목 보기</string>
+    <string name="checklist_detail_name_txt">항목 이름</string>
+
+    <string name="daylist_subtitle_text">일일 항목 확인하기</string>
+    <string name="daylist_today_memo">오늘의 기록</string>
+    <string name="daylist_content_hint">오늘 있던 일을 기록해보세요!</string>
+    <string name="daylist_details_title_text">일일 항목 상세</string>
+
+    <string name="add_txt">추가하기</string>
+    <string name="modify_attr_text_long">속성 수정하기</string>
+    <string name="modify_text">수정하기</string>
+    <string name="calender_setting">설정</string>
+    <string name="delete_text">삭제하기</string>
+
+    <string name="checklist_select_attr_btn_txt_default">전체</string>
+    <string name="checklist_attr_type">유형</string>
+    <string name="checklist_attr_title">목표</string>
+    <string name="checklist_attr_attr">속성</string>
+    <string name="checklist_attr_check">완료</string>
+    <string name="checklist_attr_check_details">자세히</string>
+    <string name="checklist_attr_check_details_show">완료 보기</string>
+    <string name="checklist_attr_content">내용</string>
+    <string name="checklist_attr_date_period">기간 선택</string>
+    <string name="checklist_attr_date_repeat">반복 선택</string>
+    <string name="checklist_attr_date_type">전환하기</string>
+
+    <string name="checklist_date_select_daily">매일</string>
+    <string name="checklist_date_select_weekly">매주</string>
+    <string name="checklist_date_select_regularly">정기</string>
+
+    <string name="checklist_date_repeat_daily_announce">매일 반복합니다.</string>
+    <string name="checklist_date_week_sunday">일</string>
+    <string name="checklist_date_week_monday">월</string>
+    <string name="checklist_date_week_tuesday">화</string>
+    <string name="checklist_date_week_wednesday">수</string>
+    <string name="checklist_date_week_thursday">목</string>
+    <string name="checklist_date_week_friday">금</string>
+    <string name="checklist_date_week_saturday">토</string>
+
+    <string name="checklist_attr_add_hint">목표를 입력하세요.</string>
+    <string name="checklist_attr_content_hint">추가 내용을 입력하세요.\n비어도 상관없습니다.</string>
+
+    <string name="attr_add_name_text">속성 이름</string>
+    <string name="attr_add_name_text_large">&#160;&#160;&#160;&#160;&#160;&#160;&#160;속성 이름&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="attr_add_already_have_attr">현재 속성</string>
+    <string name="attr_add_color_select">색상 선택</string>
+    <string name="attr_add_color_select_long">&#160;&#160;&#160;&#160;&#160;&#160;&#160;색상 선택&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="attr_add_name_hint">속성 이름을 입력하세요.</string>
+    <string name="attr_add_color_saturation">채도</string>
+    <string name="attr_add_color_value">명도</string>
+    <string name="attr_add_color_hex_string">HEX값</string>
+    <string name="attr_add_color_rgb_string">RGB값</string>
+
+    <string name="attr_change_ex">예시</string>
+
+    <string name="attr_mod_color_hex_string">이전 HEX값</string>
+    <string name="attr_mod_change_ex">수정 예시</string>
+    <string name="attr_mod_color_hex_hint">#을 빼고 입력하세요</string>
+
+    <string name="attr_list_title_text">모든 속성</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
