@@ -78,8 +78,6 @@ class daylist_details_fragment : Fragment(){
         recyclerView = binding.daylistDetailsRecyclerview;
         manager = LinearLayoutManager(view.context)
 
-
-
         setFragmentResultListener("DayListDetails"){ key , bundle ->
             today_day = bundle.getInt("Day");
             today_str = bundle.getString("Today").toString();

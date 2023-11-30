@@ -59,9 +59,6 @@ class checklist_all_fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = ChecklistAllFragmentBinding.inflate(layoutInflater);
-        // TODO : checklistrepeat 데이터도 추가하기
-        // TODO : modify, details에 checklistrepeat 추가하기
-        // TODO : calendar main에 checklistRepeat 추가하기
         // 수정하기 위해 이름을 클릭하기
         val click_listener = { id : Int, type : Int ->
             when(type) {

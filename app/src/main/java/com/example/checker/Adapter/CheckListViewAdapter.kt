@@ -71,7 +71,11 @@ class CheckListViewAdapter(private val click_listener:( Int, Int)-> Unit,
             holder.checklist_name.setText(text);
 
             // 속성
+            // 이름이 3자 이상이면 글씨 크기 줄이기
             holder.attr_name.setText(data[position].normal_list!!.attr_name)
+            if ( data[position].normal_list!!.attr_name.length > 3 ){
+                holder.attr_name.setTextSize(10f);
+            }
             val color_val = Color.parseColor(data[position].normal_list!!.attr_color);
             holder.attr_name.backgroundTintList = ColorStateList.valueOf(color_val);
 

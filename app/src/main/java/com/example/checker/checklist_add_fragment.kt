@@ -62,6 +62,7 @@ class checklist_add_fragment : Fragment() {
     lateinit var max_day : Calendar;
     lateinit var selected_attr : AttributeList;
     var selected_attr_item : TextView? = null;
+
     private var is_dday = false;
 
     // date type
@@ -423,8 +424,6 @@ class checklist_add_fragment : Fragment() {
 
                     // checklist로 변환해서 VM으로 추가하기
                     vm.insert_checklist(CheckList(0, attr_id, name, complete, start_date, end_date, context));
-                    navController.popBackStack();
-
                 }
                 false ->{
                     // checklist_repeat 에 저장
@@ -502,9 +501,16 @@ class checklist_add_fragment : Fragment() {
                     // 모든 내용이 담겼으므로 vm을 통해 checklistrepeat을 생성
                     val data = CheckListRepeat(0, attr_id, name, complete, today_date, date_repeat_type, week_val, repeat_cycle_val, context)
                     vm.insert_checklistrepeat(data)
-                    // 뒤로가기
-                    navController.popBackStack()
                 }
+            }
+
+            // daylist_detail에서 넘어왔다면 홈화면으로 이동
+            // 아니라면 backstack으로 이동
+            if( is_dday ){
+                navController.navigate(R.id.action_checklist_add_fragment_to_calendar_main_fragment2)
+            }
+            else{
+                navController.popBackStack()
             }
         }
     }

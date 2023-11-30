@@ -298,8 +298,6 @@ class checklist_detail_fragment : Fragment() {
                 }
             }
 
-
-
         }
 
         // 뒤로가기 버튼
